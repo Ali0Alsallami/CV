@@ -38,3 +38,23 @@ darkModeToggle.addEventListener('click', function() {
         darkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
     }
 });
+
+// Language Toggle
+const langToggle = document.getElementById('langToggle');
+let isArabic = false;
+
+langToggle.addEventListener('click', function() {
+    isArabic = !isArabic;
+    langToggle.textContent = isArabic ? 'English' : 'العربية';
+    document.querySelectorAll('[data-en][data-ar]').forEach(element => {
+        element.textContent = isArabic ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+    });
+    document.documentElement.setAttribute('lang', isArabic ? 'ar' : 'en');
+    document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+});
+
+// Initialize AOS
+AOS.init({
+    duration: 800,
+    once: true
+});

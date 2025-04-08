@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,37 @@
     <meta name="keywords" content="CV, Ali Mohammed Ahmed, MEAL, data management, Yemen, humanitarian, computer science">
     <meta name="author" content="Ali Mohammed Ahmed Said">
     <title>CV - Ali Mohammed Ahmed Said</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-GA-ID'); // استبدل YOUR-GA-ID بمعرف التتبع الخاص بك
+    </script>
 </head>
 <body>
-    <button id="darkModeToggle" class="dark-mode-btn"><i class="fas fa-moon"></i> Dark Mode</button>
+    <button id="darkModeToggle" class="dark-mode-btn" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i> Dark Mode</button>
+    <button id="langToggle" class="lang-btn" aria-label="Toggle Language">العربية</button>
 
     <nav>
         <ul class="nav-links">
-            <li><a href="#summary">Summary</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#standards">Standards</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#summary" data-en="Summary" data-ar="ملخص">Summary</a></li>
+            <li><a href="#experience" data-en="Experience" data-ar="الخبرة">Experience</a></li>
+            <li><a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a></li>
+            <li><a href="#portfolio" data-en="Portfolio" data-ar="المحفظة">Portfolio</a></li>
+            <li><a href="#blog" data-en="Blog" data-ar="المدونة">Blog</a></li>
+            <li><a href="#education" data-en="Education" data-ar="التعليم">Education</a></li>
+            <li><a href="#courses" data-en="Courses" data-ar="الدورات">Courses</a></li>
+            <li><a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a></li>
+            <li><a href="#standards" data-en="Standards" data-ar="المعايير">Standards</a></li>
+            <li><a href="#contact" data-en="Contact" data-ar="اتصل بي">Contact</a></li>
         </ul>
     </nav>
 
@@ -32,294 +46,250 @@
         <div class="header-content">
             <img src="profile.jpg" alt="Ali Mohammed Ahmed Said" class="profile-pic">
             <div class="header-text">
-                <h1>Ali Mohammed Ahmed Said</h1>
+                <h1 data-en="Ali Mohammed Ahmed Said" data-ar="علي محمد أحمد سعيد">Ali Mohammed Ahmed Said</h1>
                 <p>
-                    <i class="fas fa-map-marker-alt"></i> Qataba, Al-Dhalea, Yemen |
+                    <i class="fas fa-map-marker-alt"></i> <span data-en="Qataba, Al-Dhalea, Yemen" data-ar="قطابة، الضالع، اليمن">Qataba, Al-Dhalea, Yemen</span> |
                     <i class="fas fa-phone"></i> +967-772963089 / +967-735549485 |
                     <i class="fas fa-envelope"></i> alsallamiali066@gmail.com
                 </p>
-                <a href="Ali_CV.pdf" download class="download-btn">Download My CV</a>
+                <a href="cv.pdf" download class="download-btn" data-en="Download My CV" data-ar="تحميل سيرتي الذاتية">Download My CV</a>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a> <!-- استبدل برابطك الحقيقي -->
+                    <a href="https://github.com/your-username" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a> <!-- استبدل برابطك الحقيقي -->
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section id="summary">
+        <section id="summary" data-aos="fade-up">
             <div class="summary-card">
-                <h2 class="collapsible"><i class="fas fa-user"></i> Professional Summary</h2>
+                <h2 class="collapsible" data-en="Professional Summary" data-ar="ملخص مهني"><i class="fas fa-user"></i> Professional Summary</h2>
                 <div class="content">
-                    <p>Dynamic and detail-oriented MEAL and data management expert with over 8 years of experience in humanitarian and academic sectors in Yemen. Proficient in large-scale data management, MEAL tool design, and capacity-building in conflict zones. Skilled in Microsoft Excel, Kobo Toolbox, GIS, and database administration, ensuring data integrity and donor compliance (WFP, EU). Passionate about stakeholder engagement and evidence-based decision-making to drive impactful project outcomes and community welfare.</p>
+                    <p data-en="Dynamic and detail-oriented MEAL and data management expert with over 8 years of experience in humanitarian and academic sectors in Yemen. Proficient in large-scale data management, MEAL tool design, and capacity-building in conflict zones. Skilled in Microsoft Excel, Kobo Toolbox, GIS, and database administration, ensuring data integrity and donor compliance (WFP, EU). Passionate about stakeholder engagement and evidence-based decision-making to drive impactful project outcomes and community welfare." data-ar="خبير ديناميكي ودقيق في إدارة البيانات وMEAL، يمتلك أكثر من 8 سنوات من الخبرة في القطاعات الإنسانية والأكاديمية في اليمن. بارع في إدارة البيانات واسعة النطاق، تصميم أدوات MEAL، وبناء القدرات في مناطق النزاع. ماهر في Microsoft Excel، Kobo Toolbox، GIS، وإدارة قواعد البيانات، مع ضمان سلامة البيانات والامتثال للجهات المانحة (WFP، EU). شغوف بالتفاعل مع أصحاب المصلحة واتخاذ القرارات القائمة على الأدلة لتحقيق نتائج مشاريع مؤثرة ورفاهية المجتمع.">Dynamic and detail-oriented MEAL and data management expert with over 8 years of experience in humanitarian and academic sectors in Yemen. Proficient in large-scale data management, MEAL tool design, and capacity-building in conflict zones. Skilled in Microsoft Excel, Kobo Toolbox, GIS, and database administration, ensuring data integrity and donor compliance (WFP, EU). Passionate about stakeholder engagement and evidence-based decision-making to drive impactful project outcomes and community welfare.</p>
                 </div>
             </div>
         </section>
 
-        <section id="experience">
-            <h2 class="collapsible"><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <section id="experience" data-aos="fade-up">
+            <h2 class="collapsible" data-en="Work Experience" data-ar="الخبرة العملية"><i class="fas fa-briefcase"></i> Work Experience</h2>
             <div class="content">
-                <div class="job">
-                    <h3>MEAL Assistant & Data Management Assistant <span class="date">Nov 2021 – Jun 2024</span></h3>
-                    <p><strong>Yemen Family Care Association (YFCA) – Al-Dhalea, Yemen | WFP Donor</strong></p>
-                    <h4>Data Management Assistant:</h4>
-                    <ul>
-                        <li>Managed data entry for nutrition and FSL activities, inputting and updating over 10,000 beneficiary records monthly in Excel databases with 98% accuracy.</li>
-                        <li>Developed and maintained Excel databases for food distribution and nutrition interventions, using pivot tables and charts to produce summary statistics for WFP reports.</li>
-                        <li>Conducted weekly data quality checks, resolving inconsistencies (e.g., duplicates, missing entries) to ensure compliance with donor standards.</li>
-                        <li>Collaborated with project teams to design Kobo-based data collection tools, streamlining data downloads and analysis processes.</li>
-                        <li>Prepared visual data reports (e.g., malnutrition trends, distribution coverage) to support decision-making and donor presentations.</li>
-                    </ul>
-                    <h4>Assistant Monitoring, Evaluation, Accountability, and Learning (MEAL):</h4>
-                    <ul>
-                        <li>Conducted field monitoring visits to assess food distribution and nutrition programs, interviewing beneficiaries to evaluate reach and impact.</li>
-                        <li>Facilitated focus group discussions (FGDs) with stakeholders, documenting feedback to refine project interventions.</li>
-                        <li>Supported MEAL Specialists in updating monitoring tools (e.g., surveys, checklists), ensuring alignment with WFP accountability standards.</li>
-                        <li>Trained over 20 enumerators on data collection methodologies and quality standards, improving field data accuracy by 25%.</li>
-                        <li>Analyzed field data for interim and final reports, identifying trends (e.g., food insecurity spikes) and proposing actionable improvements.</li>
-                    </ul>
-                    <h4>Key Achievements:</h4>
-                    <ul>
-                        <li>Managed data for 30,000+ beneficiaries, ensuring accurate WFP reporting over three years.</li>
-                        <li>Enhanced data collection efficiency by 25% through enumerator training and tool optimization.</li>
-                    </ul>
-                </div>
-
-                <div class="job">
-                    <h3>Field Monitor <span class="date">Apr 2021 – Sep 2021</span></h3>
-                    <p><strong>Yemen Family Care Association (YFCA) – Qataba, Al-Dhalea | EU Donor</strong></p>
-                    <ul>
-                        <li>Conducted field visits to monitor protection risks (e.g., domestic violence, early marriage) affecting women and girls in conflict zones.</li>
-                        <li>Performed household assessments and facilitated FGDs to identify GBV cases and protection needs, documenting findings with standardized tools.</li>
-                        <li>Evaluated public space safety (e.g., water points, markets), recommending risk mitigation strategies for project implementation.</li>
-                        <li>Collected and managed GBV data using incident forms and checklists, ensuring confidentiality and survivor-centered reporting.</li>
-                        <li>Identified vulnerable women (e.g., GBV survivors) via rapid screenings, prioritizing psychosocial and legal support referrals.</li>
-                        <li>Mapped protection services and facilitated referrals, tracking outcomes with follow-ups to ensure service delivery.</li>
-                        <li>Engaged communities through dialogues and house visits, raising awareness on legal rights and GBV prevention.</li>
-                        <li>Trained women’s groups as protection focal points, strengthening community-based protection networks.</li>
-                        <li>Prepared field reports on protection trends (e.g., GBV spikes during economic stress) for advocacy and program adjustments.</li>
-                    </ul>
-                    <h4>Key Achievements:</h4>
-                    <ul>
-                        <li>Referred 50+ GBV cases to support services, improving survivor access in Qataba District.</li>
-                        <li>Reached 200+ households with protection awareness campaigns.</li>
-                    </ul>
-                </div>
-
-                <div class="job">
-                    <h3>Head of Academic Department <span class="date">Jan 2020 – Nov 2021</span></h3>
-                    <p><strong>National Institute for Science and Technology (NIST) – Al-Dhalea, Yemen</strong></p>
-                    <ul>
-                        <li>Oversaw HR policy implementation, managing contracts and attendance for 15+ lecturers and staff.</li>
-                        <li>Evaluated staff performance, providing feedback to enhance teaching quality and departmental efficiency.</li>
-                        <li>Managed budget and resources, coordinating equipment maintenance to support academic operations.</li>
-                        <li>Developed IT curricula and training courses, aligning programs with industry standards.</li>
-                        <li>Supervised 30+ annual student graduation projects, ensuring successful completion and reporting to the Dean.</li>
-                    </ul>
-                    <h4>Key Achievements:</h4>
-                    <ul>
-                        <li>Launched two new IT courses, boosting enrollment by 20%.</li>
-                        <li>Reduced equipment downtime by 30% through proactive maintenance.</li>
-                    </ul>
-                </div>
-
-                <div class="job">
-                    <h3>MEAL Assistant & Data Entry <span class="date">Nov 2018 – Oct 2020</span></h3>
-                    <p><strong>Qatar Red Crescent (QRC) – Al-Dhalea, Yemen</strong></p>
-                    <ul>
-                        <li>Conducted field data collection via household interviews, ensuring quality data for 5,000+ records.</li>
-                        <li>Created activity-specific documents (e.g., ID cards, attendance sheets) and verified database accuracy.</li>
-                        <li>Supported rapid needs assessments (e.g., YEMRA), analyzing data for project impact reports.</li>
-                        <li>Designed M&E tools and led hygiene promotion sessions, educating communities on cholera prevention.</li>
-                        <li>Managed data entry and cleaning, resolving inconsistencies to maintain database integrity.</li>
-                    </ul>
-                    <h4>Key Achievements:</h4>
-                    <ul>
-                        <li>Improved data quality for 5,000+ records, reducing errors by 15%.</li>
-                        <li>Trained 50+ community members, contributing to a 10% cholera case reduction.</li>
-                    </ul>
-                </div>
-
-                <div class="job">
-                    <h3>Database Administrator <span class="date">Sep 2016 – Aug 2018</span></h3>
-                    <p><strong>Yemensoft Company Deputy – Ibb, Yemen</strong></p>
-                    <ul>
-                        <li>Resolved database issues for 100+ client systems (e.g., ERP Onyxpro), ensuring operational continuity.</li>
-                        <li>Designed and managed databases with backup and security protocols for financial data protection.</li>
-                        <li>Trained 50+ clients on accounting systems, improving their financial management capabilities.</li>
-                        <li>Managed CRM data entry and provided financing consultancy for accurate system use.</li>
-                        <li>Coordinated hardware/software maintenance to enhance system performance.</li>
-                    </ul>
-                    <h4>Key Achievements:</h4>
-                    <ul>
-                        <li>Achieved 95% client satisfaction by resolving database issues efficiently.</li>
-                        <li>Reduced financial reporting errors by 20% through client training.</li>
-                    </ul>
-                </div>
-
-                <div class="job">
-                    <h3>Department Manager <span class="date">Jan 2015 – Dec 2016</span></h3>
-                    <p><strong>Engineering College, Labs & Equipment Department – Ibb, Yemen</   <ul>
-                        <li>Managed lab and office maintenance, ensuring equipment availability for 200+ students and staff daily.</li>
-                        <li>Processed maintenance requests, coordinating repairs to minimize disruptions.</li>
-                        <li>Supervised logistics (fleet, generators), maintaining reliable college operations.</li>
-                        <li>Oversaw inventory tracking for supplies, ensuring timely replenishment.</li>
-                        <li>Supported the Dean with event planning and resource allocation.</li>
-                    </ul>
-                    <h4>Key Achievements:</h4>
-                    <ul>
-                        <li>Reduced equipment downtime by 25% through efficient maintenance.</li>
-                        <li>Improved transportation logistics, enhancing mobility by 15%.</li>
-                    </ul>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 data-en="MEAL Assistant & Data Management Assistant" data-ar="مساعد MEAL ومساعد إدارة البيانات">MEAL Assistant & Data Management Assistant</h3>
+                            <p class="date" data-en="Nov 2021 – Jun 2024" data-ar="نوفمبر 2021 - يونيو 2024">Nov 2021 – Jun 2024</p>
+                            <p><strong data-en="Yemen Family Care Association (YFCA) – Al-Dhalea, Yemen | WFP Donor" data-ar="جمعية الرعاية الأسرية اليمنية (YFCA) - الضالع، اليمن | متبرع WFP">Yemen Family Care Association (YFCA) – Al-Dhalea, Yemen | WFP Donor</strong></p>
+                            <h4 data-en="Data Management Assistant:" data-ar="مساعد إدارة البيانات:">Data Management Assistant:</h4>
+                            <ul>
+                                <li data-en="Managed data entry for nutrition and FSL activities, inputting and updating over 10,000 beneficiary records monthly in Excel databases with 98% accuracy." data-ar="أدرت إدخال البيانات لأنشطة التغذية وFSL، مع إدخال وتحديث أكثر من 10,000 سجل مستفيد شهريًا في قواعد بيانات Excel بدقة 98%.">Managed data entry for nutrition and FSL activities, inputting and updating over 10,000 beneficiary records monthly in Excel databases with 98% accuracy.</li>
+                                <li data-en="Developed and maintained Excel databases for food distribution and nutrition interventions, using pivot tables and charts to produce summary statistics for WFP reports." data-ar="طورت وحافظت على قواعد بيانات Excel لتوزيع الغذاء وتدخلات التغذية، باستخدام الجداول المحورية والرسوم البيانية لإنتاج إحصاءات موجزة لتقارير WFP.">Developed and maintained Excel databases for food distribution and nutrition interventions, using pivot tables and charts to produce summary statistics for WFP reports.</li>
+                            </ul>
+                            <h4 data-en="Assistant Monitoring, Evaluation, Accountability, and Learning (MEAL):" data-ar="مساعد الرصد والتقييم والمساءلة والتعلم (MEAL):">Assistant Monitoring, Evaluation, Accountability, and Learning (MEAL):</h4>
+                            <ul>
+                                <li data-en="Conducted field monitoring visits to assess food distribution and nutrition programs, interviewing beneficiaries to evaluate reach and impact." data-ar="أجريت زيارات رصد ميدانية لتقييم برامج توزيع الغذاء والتغذية، مع إجراء مقابلات مع المستفيدين لتقييم الوصول والتأثير.">Conducted field monitoring visits to assess food distribution and nutrition programs, interviewing beneficiaries to evaluate reach and impact.</li>
+                                <li data-en="Trained over 20 enumerators on data collection methodologies and quality standards, improving field data accuracy by 25%." data-ar="دربت أكثر من 20 جامع بيانات على منهجيات جمع البيانات ومعايير الجودة، مما حسّن دقة البيانات الميدانية بنسبة 25%.">Trained over 20 enumerators on data collection methodologies and quality standards, improving field data accuracy by 25%.</li>
+                            </ul>
+                            <h4 data-en="Key Achievements:" data-ar="الإنجازات الرئيسية:">Key Achievements:</h4>
+                            <ul>
+                                <li data-en="Managed data for 30,000+ beneficiaries, ensuring accurate WFP reporting over three years." data-ar="أدرت بيانات أكثر من 30,000 مستفيد، مع ضمان تقارير دقيقة لـ WFP على مدى ثلاث سنوات.">Managed data for 30,000+ beneficiaries, ensuring accurate WFP reporting over three years.</li>
+                                <li data-en="Enhanced data collection efficiency by 25% through enumerator training and tool optimization." data-ar="عززت كفاءة جمع البيانات بنسبة 25% من خلال تدريب جامعي البيانات وتحسين الأدوات.">Enhanced data collection efficiency by 25% through enumerator training and tool optimization.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 data-en="Field Monitor" data-ar="مراقب ميداني">Field Monitor</h3>
+                            <p class="date" data-en="Apr 2021 – Sep 2021" data-ar="أبريل 2021 - سبتمبر 2021">Apr 2021 – Sep 2021</p>
+                            <p><strong data-en="Yemen Family Care Association (YFCA) – Qataba, Al-Dhalea | EU Donor" data-ar="جمعية الرعاية الأسرية اليمنية (YFCA) - قطابة، الضالع | متبرع EU">Yemen Family Care Association (YFCA) – Qataba, Al-Dhalea | EU Donor</strong></p>
+                            <ul>
+                                <li data-en="Conducted field visits to monitor protection risks (e.g., domestic violence, early marriage) affecting women and girls in conflict zones." data-ar="أجريت زيارات ميدانية لمراقبة مخاطر الحماية (مثل العنف المنزلي والزواج المبكر) التي تؤثر على النساء والفتيات في مناطق النزاع.">Conducted field visits to monitor protection risks (e.g., domestic violence, early marriage) affecting women and girls in conflict zones.</li>
+                                <li data-en="Prepared field reports on protection trends (e.g., GBV spikes during economic stress) for advocacy and program adjustments." data-ar="أعددت تقارير ميدانية عن اتجاهات الحماية (مثل ارتفاع العنف القائم على الجنس أثناء الضغط الاقتصادي) لأغراض المناصرة وتعديل البرامج.">Prepared field reports on protection trends (e.g., GBV spikes during economic stress) for advocacy and program adjustments.</li>
+                            </ul>
+                            <h4 data-en="Key Achievements:" data-ar="الإنجازات الرئيسية:">Key Achievements:</h4>
+                            <ul>
+                                <li data-en="Referred 50+ GBV cases to support services, improving survivor access in Qataba District." data-ar="أحلت أكثر من 50 حالة عنف قائم على الجنس إلى خدمات الدعم، مما حسّن وصول الناجين في مديرية قطابة.">Referred 50+ GBV cases to support services, improving survivor access in Qataba District.</li>
+                                <li data-en="Reached 200+ households with protection awareness campaigns." data-ar="وصلت إلى أكثر من 200 أسرة بحملات توعية بالحماية.">Reached 200+ households with protection awareness campaigns.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2 class="collapsible"><i class="fas fa-project-diagram"></i> Projects & Achievements</h2>
+        <section id="projects" data-aos="fade-up">
+            <h2 class="collapsible" data-en="Projects & Achievements" data-ar="المشاريع والإنجازات"><i class="fas fa-project-diagram"></i> Projects & Achievements</h2>
             <div class="content">
                 <div class="project-card">
-                    <h3>Nutrition Database System (YFCA)</h3>
-                    <p>Developed a comprehensive Excel-based database to track nutrition project activities for YFCA, managing data for over 30,000 beneficiaries. Improved data accuracy by 98% and streamlined reporting for WFP.</p>
+                    <h3 data-en="Nutrition Database System (YFCA)" data-ar="نظام قاعدة بيانات التغذية (YFCA)">Nutrition Database System (YFCA)</h3>
+                    <p data-en="Developed a comprehensive Excel-based database to track nutrition project activities for YFCA, managing data for over 30,000 beneficiaries. Improved data accuracy by 98% and streamlined reporting for WFP." data-ar="طورت قاعدة بيانات شاملة تعتمد على Excel لتتبع أنشطة مشروع التغذية لـ YFCA، مع إدارة بيانات أكثر من 30,000 مستفيد. حسنت دقة البيانات بنسبة 98% وسهلت التقارير لـ WFP.">Developed a comprehensive Excel-based database to track nutrition project activities for YFCA, managing data for over 30,000 beneficiaries. Improved data accuracy by 98% and streamlined reporting for WFP.</p>
                 </div>
                 <div class="project-card">
-                    <h3>ERP Implementation (Yemensoft)</h3>
-                    <p>Led the deployment of ERP Onyxpro system at Yemensoft, reducing financial reporting errors by 20% through effective client training and system optimization.</p>
+                    <h3 data-en="ERP Implementation (Yemensoft)" data-ar="تنفيذ ERP (Yemensoft)">ERP Implementation (Yemensoft)</h3>
+                    <p data-en="Led the deployment of ERP Onyxpro system at Yemensoft, reducing financial reporting errors by 20% through effective client training and system optimization." data-ar="قدت نشر نظام ERP Onyxpro في Yemensoft، مما قلل أخطاء التقارير المالية بنسبة 20% من خلال تدريب العملاء بفعالية وتحسين النظام.">Led the deployment of ERP Onyxpro system at Yemensoft, reducing financial reporting errors by 20% through effective client training and system optimization.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Cholera Prevention Campaign (QRC)</h3>
-                    <p>Designed M&E tools and led hygiene promotion sessions for QRC, contributing to a 10% reduction in cholera cases in targeted communities.</p>
+                    <h3 data-en="Cholera Prevention Campaign (QRC)" data-ar="حملة الوقاية من الكوليرا (QRC)">Cholera Prevention Campaign (QRC)</h3>
+                    <p data-en="Designed M&E tools and led hygiene promotion sessions for QRC, contributing to a 10% reduction in cholera cases in targeted communities." data-ar="صممت أدوات M&E وقدت جلسات تعزيز النظافة لـ QRC، مما ساهم في تقليل حالات الكوليرا بنسبة 10% في المجتمعات المستهدفة.">Designed M&E tools and led hygiene promotion sessions for QRC, contributing to a 10% reduction in cholera cases in targeted communities.</p>
                 </div>
             </div>
         </section>
 
-        <section id="education">
-            <h2 class="collapsible"><i class="fas fa-graduation-cap"></i> Education</h2>
+        <section id="portfolio" data-aos="fade-up">
+            <h2 class="collapsible" data-en="Professional Portfolio Gallery" data-ar="معرض المحفظة المهنية"><i class="fas fa-images"></i> Professional Portfolio Gallery</h2>
             <div class="content">
-                <p><strong>Bachelor’s Degree in Computer Science & Programming</strong> <span class="date">Graduated: Feb 2016</span><br>Faculty of Engineering, University of Ibb, Yemen</p>
-                <p><strong>General Secondary Certificate (Scientific Section)</strong> <span class="date">Graduated: Nov 2010</span><br>Khaled bin Alwaleed Secondary School, Ibb, Yemen</p>
-            </div>
-        </section>
-
-        <section id="courses">
-            <h2 class="collapsible"><i class="fas fa-certificate"></i> Courses & Certifications</h2>
-            <div class="content">
-                <div class="course-card">
-                    <h4>Managing Your Priorities</h4>
-                    <p>Humanitarian Leadership Academy (Online) | Nov 2023</p>
-                </div>
-                <div class="course-card">
-                    <h4>Managing Yourself and Your Time</h4>
-                    <p>Humanitarian Leadership Academy (Online) | Nov 2023</p>
-                </div>
-                <div class="course-card">
-                    <h4>MEAL DPro Certificate</h4>
-                    <p>Humanitarian Leadership Academy (Online) | Oct 2023</p>
-                </div>
-                <div class="course-card">
-                    <h4>Safeguarding Essentials</h4>
-                    <p>Humanitarian Leadership Academy (Online) | Mar 2023</p>
-                </div>
-                <div class="course-card">
-                    <h4>AAP Course (Accountability to Affected Populations)</h4>
-                    <p>UNICEF | Mar 2023</p>
-                </div>
-                <div class="course-card">
-                    <h4>Personal Safety and Security</h4>
-                    <p>DisasterReady.org (Online) | Oct 2022</p>
-                </div>
-                <div class="course-card">
-                    <h4>GDPR Training</h4>
-                    <p>EK Advisory (Online) | Aug 2022</p>
-                </div>
-                <div class="course-card">
-                    <h4>Data Analytics for M&E using Microsoft Excel</h4>
-                    <p>DataForDev (Online) | Aug 2022</p>
-                </div>
-                <div class="course-card">
-                    <h4>Capacity Building (Kobo Toolbox, Microsoft Excel, Google Forms, GIS)</h4>
-                    <p>UNICEF | Jul–Aug 2022</p>
-                </div>
-                <div class="course-card">
-                    <h4>PSEA Course (Prevention of Sexual Exploitation and Abuse)</h4>
-                    <p>UNICEF (Online) | Aug 2021</p>
-                </div>
-                <div class="course-card">
-                    <h4>Project Management</h4>
-                    <p>Hiproo Institute (Mercy Corps Financing) | Jul 2018</p>
-                </div>
-                <div class="course-card">
-                    <h4>English Language</h4>
-                    <p>Languages Center, University of Ibb | 2017</p>
-                </div>
-                <div class="course-card">
-                    <h4>Cisco CCNA1 Networking</h4>
-                    <p>Ibb Communication Institute | Jan 2015</p>
+                <div class="gallery">
+                    <a href="portfolio/kobo-tool.jpg" data-lightbox="portfolio" data-title="Kobo Toolbox Data Collection Tool">
+                        <img src="portfolio/kobo-tool.jpg" alt="Kobo Toolbox Tool"> <!-- استبدل بمسار الصورة الحقيقية -->
+                    </a>
+                    <a href="portfolio/excel-dashboard.jpg" data-lightbox="portfolio" data-title="Excel Dashboard for Nutrition Tracking">
+                        <img src="portfolio/excel-dashboard.jpg" alt="Excel Dashboard"> <!-- استبدل بمسار الصورة الحقيقية -->
+                    </a>
+                    <a href="portfolio/gis-map.jpg" data-lightbox="portfolio" data-title="GIS Map for Field Monitoring">
+                        <img src="portfolio/gis-map.jpg" alt="GIS Map"> <!-- استبدل بمسار الصورة الحقيقية -->
+                    </a>
+                    <a href="portfolio/report-visual.jpg" data-lightbox="portfolio" data-title="Visual Report for WFP">
+                        <img src="portfolio/report-visual.jpg" alt="Visual Report"> <!-- استبدل بمسار الصورة الحقيقية -->
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
-            <h2 class="collapsible"><i class="fas fa-tools"></i> Skills</h2>
+        <section id="blog" data-aos="fade-up">
+            <h2 class="collapsible" data-en="Insights & Blog" data-ar="رؤى ومدونة"><i class="fas fa-blog"></i> Insights & Blog</h2>
             <div class="content">
-                <h4>Technical:</h4>
+                <div class="blog-post">
+                    <h3 data-en="How Excel Helped Me Track Food Distribution in Remote Areas" data-ar="كيف ساعدني Excel في تتبع توزيع الغذاء في المناطق النائية">How Excel Helped Me Track Food Distribution in Remote Areas</h3>
+                    <p data-en="Published: April 10, 2025" data-ar="نُشر في: 10 أبريل 2025">Published: April 10, 2025</p>
+                    <p data-en="In this article, I share how I used Excel pivot tables and charts to monitor food distribution for 30,000+ beneficiaries in Al-Dhalea, ensuring accurate reporting for WFP." data-ar="في هذا المقال، أشارك كيف استخدمت جداول Excel المحورية والرسوم البيانية لمراقبة توزيع الغذاء لأكثر من 30,000 مستفيد في الضالع، مع ضمان تقارير دقيقة لـ WFP.">In this article, I share how I used Excel pivot tables and charts to monitor food distribution for 30,000+ beneficiaries in Al-Dhalea, ensuring accurate reporting for WFP.</p>
+                </div>
+                <div class="blog-post">
+                    <h3 data-en="3 Free Tools for Designing Effective Field Assessment Tools" data-ar="3 أدوات مجانية لتصميم أدوات تقييم ميدانية فعالة">3 Free Tools for Designing Effective Field Assessment Tools</h3>
+                    <p data-en="Published: April 5, 2025" data-ar="نُشر في: 5 أبريل 2025">Published: April 5, 2025</p>
+                    <p data-en="Learn about three free tools (Kobo Toolbox, ODK Collect, Google Forms) that I used to design field assessment tools, improving data collection efficiency by 25%." data-ar="تعرف على ثلاث أدوات مجانية (Kobo Toolbox، ODK Collect، Google Forms) استخدمتها لتصميم أدوات تقييم ميدانية، مما حسّن كفاءة جمع البيانات بنسبة 25%.">Learn about three free tools (Kobo Toolbox, ODK Collect, Google Forms) that I used to design field assessment tools, improving data collection efficiency by 25%.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" data-aos="fade-up">
+            <h2 class="collapsible" data-en="Education" data-ar="التعليم"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="content">
+                <p><strong data-en="Bachelor’s Degree in Computer Science & Programming" data-ar="بكالوريوس في علوم الحاسوب والبرمجة">Bachelor’s Degree in Computer Science & Programming</strong> <span class="date" data-en="Graduated: Feb 2016" data-ar="تخرج: فبراير 2016">Graduated: Feb 2016</span><br><span data-en="Faculty of Engineering, University of Ibb, Yemen" data-ar="كلية الهندسة، جامعة إب، اليمن">Faculty of Engineering, University of Ibb, Yemen</span></p>
+                <p><strong data-en="General Secondary Certificate (Scientific Section)" data-ar="شهادة الثانوية العامة (القسم العلمي)">General Secondary Certificate (Scientific Section)</strong> <span class="date" data-en="Graduated: Nov 2010" data-ar="تخرج: نوفمبر 2010">Graduated: Nov 2010</span><br><span data-en="Khaled bin Alwaleed Secondary School, Ibb, Yemen" data-ar="مدرسة خالد بن الوليد الثانوية، إب، اليمن">Khaled bin Alwaleed Secondary School, Ibb, Yemen</span></p>
+            </div>
+        </section>
+
+        <section id="courses" data-aos="fade-up">
+            <h2 class="collapsible" data-en="Courses & Certifications" data-ar="الدورات والشهادات"><i class="fas fa-certificate"></i> Courses & Certifications</h2>
+            <div class="content">
+                <div class="course-card">
+                    <h4 data-en="Managing Your Priorities" data-ar="إدارة أولوياتك">Managing Your Priorities</h4>
+                    <p data-en="Humanitarian Leadership Academy (Online) | Nov 2023" data-ar="أكاديمية القيادة الإنسانية (عبر الإنترنت) | نوفمبر 2023">Humanitarian Leadership Academy (Online) | Nov 2023</p>
+                </div>
+                <div class="course-card">
+                    <h4 data-en="Managing Yourself and Your Time" data-ar="إدارة نفسك ووقتك">Managing Yourself and Your Time</h4>
+                    <p data-en="Humanitarian Leadership Academy (Online) | Nov 2023" data-ar="أكاديمية القيادة الإنسانية (عبر الإنترنت) | نوفمبر 2023">Humanitarian Leadership Academy (Online) | Nov 2023</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" data-aos="fade-up">
+            <h2 class="collapsible" data-en="Skills" data-ar="المهارات"><i class="fas fa-tools"></i> Skills</h2>
+            <div class="content">
+                <h4 data-en="Technical:" data-ar="تقني:">Technical:</h4>
+                <div class="skill">
+                    <span data-en="Microsoft Excel" data-ar="مايكروسوفت إكسل">Microsoft Excel</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span data-en="Kobo Toolbox" data-ar="Kobo Toolbox">Kobo Toolbox</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span data-en="GIS" data-ar="GIS">GIS</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span data-en="Data Analytics" data-ar="تحليل البيانات">Data Analytics</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+                <h4 data-en="Professional:" data-ar="مهني:">Professional:</h4>
+                <div class="skill">
+                    <span data-en="Data Quality Assurance" data-ar="ضمان جودة البيانات">Data Quality Assurance</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span data-en="MEAL Tool Design" data-ar="تصميم أدوات MEAL">MEAL Tool Design</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+                <h4 data-en="Interpersonal:" data-ar="شخصي:">Interpersonal:</h4>
+                <div class="skill">
+                    <span data-en="Leadership" data-ar="القيادة">Leadership</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span data-en="Problem-Solving" data-ar="حل المشكلات">Problem-Solving</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+                <h4 data-en="Languages:" data-ar="اللغات:">Languages:</h4>
                 <ul>
-                    <li>Advanced Microsoft Excel (pivot tables, charts)</li>
-                    <li>Kobo Toolbox, ODK Collect, Google Forms</li>
-                    <li>GIS, database management (ERP Onyxpro, CRM)</li>
-                    <li>Data analytics, IT troubleshooting</li>
-                </ul>
-                <h4>Professional:</h4>
-                <ul>
-                    <li>Data quality assurance, MEAL tool design</li>
-                    <li>Field monitoring, capacity building</li>
-                    <li>Project coordination, report writing</li>
-                    <li>Monitoring and evaluation expertise</li>
-                </ul>
-                <h4>Interpersonal:</h4>
-                <ul>
-                    <li>Leadership and organizational awareness</li>
-                    <li>Excellent interpersonal and problem-solving skills</li>
-                    <li>Proficiency in open-source research and social media platforms</li>
-                    <li>Strong computer skills including data entry and management</li>
-                </ul>
-                <h4>Languages:</h4>
-                <ul>
-                    <li>Fluent in Arabic (native)</li>
-                    <li>Fluent in English (oral and written)</li>
+                    <li data-en="Fluent in Arabic (native)" data-ar="يتحدث العربية بطلاقة (اللغة الأم)">Fluent in Arabic (native)</li>
+                    <li data-en="Fluent in English (oral and written)" data-ar="يتحدث الإنجليزية بطلاقة (شفهيًا وكتابيًا)">Fluent in English (oral and written)</li>
                 </ul>
             </div>
         </section>
 
-        <section id="standards">
-            <h2 class="collapsible"><i class="fas fa-shield-alt"></i> Professional Standards</h2>
+        <section id="standards" data-aos="fade-up">
+            <h2 class="collapsible" data-en="Professional Standards" data-ar="المعايير المهنية"><i class="fas fa-shield-alt"></i> Professional Standards</h2>
             <div class="content">
-                <p>Committed to integrity, accountability, and equity in all professional endeavors, adhering to humanitarian principles such as beneficiary protection, child safeguarding, and anti-harassment policies.</p>
+                <p data-en="Committed to integrity, accountability, and equity in all professional endeavors, adhering to humanitarian principles such as beneficiary protection, child safeguarding, and anti-harassment policies." data-ar="ملتزم بالنزاهة والمساءلة والإنصاف في جميع المساعي المهنية، مع الالتزام بمبادئ الإنسانية مثل حماية المستفيدين، حماية الأطفال، وسياسات مكافحة التحرش.">Committed to integrity, accountability, and equity in all professional endeavors, adhering to humanitarian principles such as beneficiary protection, child safeguarding, and anti-harassment policies.</p>
             </div>
         </section>
 
-        <section id="contact">
-            <h2 class="collapsible"><i class="fas fa-address-book"></i> Contact Me</h2>
+        <section id="contact" data-aos="fade-up">
+            <h2 class="collapsible" data-en="Contact Me" data-ar="اتصل بي"><i class="fas fa-address-book"></i> Contact Me</h2>
             <div class="content">
-                <form action="https://formspree.io/f/your-form-id" method="POST">
-                    <label for="name">Name:</label>
+                <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- استبدل your-form-id بمعرف النموذج الخاص بك -->
+                    <label for="name" data-en="Name:" data-ar="الاسم:">Name:</label>
                     <input type="text" id="name" name="name" required>
-                    <label for="email">Email:</label>
+                    <label for="email" data-en="Email:" data-ar="البريد الإلكتروني:">Email:</label>
                     <input type="email" id="email" name="email" required>
-                    <label for="message">Message:</label>
+                    <label for="message" data-en="Message:" data-ar="الرسالة:">Message:</label>
                     <textarea id="message" name="message" required></textarea>
-                    <button type="submit">Send Message</button>
+                    <button type="submit" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
                 </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Ali Mohammed Ahmed Said</p>
+        <p data-en="© 2025 Ali Mohammed Ahmed Said" data-ar="© 2025 علي محمد أحمد سعيد">© 2025 Ali Mohammed Ahmed Said</p>
         <div class="footer-links">
-            <a href="mailto:alsallamiali066@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-            <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:alsallamiali066@gmail.com"><i class="fas fa-envelope"></i> <span data-en="Email" data-ar="البريد الإلكتروني">Email</span></a>
+            <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i> <span data-en="LinkedIn" data-ar="لينكدإن">LinkedIn</span></a> <!-- استبدل برابطك الحقيقي -->
+            <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i> <span data-en="GitHub" data-ar="جيت هب">GitHub</span></a> <!-- استبدل برابطك الحقيقي -->
         </div>
     </footer>
 
-    <button onclick="topFunction()" id="backToTop">Back to Top</button>
+    <button onclick="topFunction()" id="backToTop" aria-label="Scroll to Top" data-en="Back to Top" data-ar="العودة إلى الأعلى">Back to Top</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
