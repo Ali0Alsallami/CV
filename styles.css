@@ -1,9 +1,72 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f9;
+    background-color: #f9f9fb;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.dark-mode .nav-links {
+    background-color: #2c2c2c;
+}
+
+.dark-mode header {
+    background: linear-gradient(135deg, #2c2c2c 0%, #3a3a3a 100%);
+}
+
+.dark-mode .summary-card {
+    background-color: #2c2c2c;
+    border-color: #444;
+}
+
+.dark-mode h2 {
+    color: #e0e0e0;
+    border-bottom-color: #e67e22;
+}
+
+.dark-mode h3, .dark-mode h4, .dark-mode p, .dark-mode li {
+    color: #e0e0e0;
+}
+
+.dark-mode .project-card, .dark-mode .course-card {
+    background-color: #2c2c2c;
+    border-color: #444;
+}
+
+.dark-mode footer {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+.dark-mode .footer-links a {
+    color: #e0e0e0;
+}
+
+.dark-mode .footer-links a:hover {
+    color: #e67e22;
+}
+
+.dark-mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+    background-color: #d35400;
 }
 
 .nav-links {
@@ -23,7 +86,7 @@ body {
 .nav-links a {
     text-decoration: none;
     color: #1a3c34;
-    font-weight: bold;
+    font-weight: 600;
 }
 .nav-links a:hover {
     color: #e67e22;
@@ -36,18 +99,23 @@ header {
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.header-text {
+    text-align: left;
+}
 .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: contain;
     background-color: #fff;
-    margin-bottom: 15px;
     border: 3px solid #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .profile-pic:hover {
     transform: scale(1.05);
@@ -59,10 +127,11 @@ h1 {
 }
 h2 {
     color: #1a3c34;
+    font-size: 2em;
     border-bottom: 2px solid #1a3c34;
     padding-bottom: 5px;
     margin-top: 40px;
-    cursor: pointer; /* جعل العنوان قابل للنقر */
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 h2:hover {
@@ -73,26 +142,38 @@ h2 i {
     color: #e67e22;
 }
 h2.active i {
-    transform: rotate(90deg); /* تدوير الأيقونة عند التوسيع */
+    transform: rotate(90deg);
     transition: transform 0.3s ease;
 }
 h3 {
     color: #333;
     margin-bottom: 5px;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 h4 {
     color: #555;
     margin: 10px 0 5px;
-    font-size: 1.1em;
+    font-size: 1.2em;
+}
+.date {
+    font-size: 0.9em;
+    color: #777;
+    float: right;
 }
 section {
     margin: 40px 0;
 }
+.summary-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #e67e22;
+}
 .content {
-    max-height: 0; /* إخفاء المحتوى افتراضيًا */
+    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out; /* تأثير انتقالي سلس */
+    transition: max-height 0.3s ease-out;
 }
 ul {
     list-style-type: none;
@@ -131,17 +212,47 @@ p {
 .download-btn:hover {
     background-color: #d35400;
 }
-#contact a {
-    color: #1a3c34;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
+.project-card, .course-card {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #1a3c34;
 }
-#contact a:hover {
-    color: #e67e22;
+.project-card h3, .course-card h4 {
+    margin: 0 0 5px;
 }
-#contact i {
-    margin-right: 5px;
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin: 10px 0 5px;
+    font-weight: 600;
+}
+input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+textarea {
+    height: 100px;
+}
+button[type="submit"] {
+    padding: 10px;
+    background-color: #1a3c34;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #e67e22;
 }
 footer {
     text-align: center;
@@ -150,6 +261,21 @@ footer {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+.footer-links {
+    margin-top: 10px;
+}
+.footer-links a {
+    color: #1a3c34;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+}
+.footer-links a:hover {
+    color: #e67e22;
+}
+.footer-links i {
+    margin-right: 5px;
 }
 
 #backToTop {
@@ -169,6 +295,13 @@ footer {
 }
 
 @media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-text {
+        text-align: center;
+    }
     header {
         padding: 20px;
     }
@@ -195,5 +328,14 @@ footer {
     .download-btn {
         padding: 8px 15px;
         font-size: 0.9em;
+    }
+    .summary-card {
+        padding: 15px;
+    }
+    .project-card, .course-card {
+        padding: 10px;
+    }
+    form {
+        padding: 0 10px;
     }
 }
