@@ -1,60 +1,25 @@
-// Collapsible functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const collapsibles = document.getElementsByClassName('collapsible');
-    for (let i = 0; i < collapsibles.length; i++) {
-        collapsibles[i].addEventListener('click', function() {
-            this.classList.toggle('active');
-            const content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    }
-});
-
-// Back to Top functionality
-window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        document.getElementById("backToTop").style.display = "block";
-    } else {
-        document.getElementById("backToTop").style.display = "none";
-    }
-};
-
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+function toggleTheme() {
+  const theme = document.documentElement.getAttribute("data-theme");
+  document.documentElement.setAttribute("data-theme", theme === "dark" ? "light" : "dark");
 }
 
-// Dark Mode Toggle
-const darkModeToggle = document.getElementById('darkModeToggle');
-darkModeToggle.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    if (document.body.classList.contains('dark-mode')) {
-        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
-    } else {
-        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
-    }
-});
+function animateValue(id, start, end, duration) {
+  let current = start;
+  const step = (end - start) / (duration / 50);
+  const obj = document.getElementById(id);
+  const timer = setInterval(() => {
+    current += step;
+    obj.textContent = Math.floor(current);
+    if (current >= end) clearInterval(timer);
+  }, 50);
+}
 
-// Language Toggle
-const langToggle = document.getElementById('langToggle');
-let isArabic = false;
+window.onload = () => {
+  animateValue("projects", 0, 18, 1000);
+  animateValue("years", 0, 8, 1000);
 
-langToggle.addEventListener('click', function() {
-    isArabic = !isArabic;
-    langToggle.textContent = isArabic ? 'English' : 'العربية';
-    document.querySelectorAll('[data-en][data-ar]').forEach(element => {
-        element.textContent = isArabic ? element.getAttribute('data-ar') : element.getAttribute('data-en');
-    });
-    document.documentElement.setAttribute('lang', isArabic ? 'ar' : 'en');
-    document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
-});
-
-// Initialize AOS
-AOS.init({
-    duration: 800,
-    once: true
-});
+  document.getElementById("contact-form").onsubmit = function (e) {
+    e.preventDefault();
+    document.getElementById("form-msg").innerText = "Message sent successfully!";
+  };
+};
