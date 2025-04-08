@@ -62,10 +62,19 @@ h2 {
     border-bottom: 2px solid #1a3c34;
     padding-bottom: 5px;
     margin-top: 40px;
+    cursor: pointer; /* جعل العنوان قابل للنقر */
+    transition: background-color 0.3s ease;
+}
+h2:hover {
+    background-color: #e8f4f8;
 }
 h2 i {
     margin-right: 10px;
     color: #e67e22;
+}
+h2.active i {
+    transform: rotate(90deg); /* تدوير الأيقونة عند التوسيع */
+    transition: transform 0.3s ease;
 }
 h3 {
     color: #333;
@@ -79,6 +88,11 @@ h4 {
 }
 section {
     margin: 40px 0;
+}
+.content {
+    max-height: 0; /* إخفاء المحتوى افتراضيًا */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* تأثير انتقالي سلس */
 }
 ul {
     list-style-type: none;
