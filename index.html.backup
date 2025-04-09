@@ -1,0 +1,75 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-en="Ali Mohammed Ahmed Said - CV" data-ar="السيرة الذاتية - علي محمد أحمد سعيد">Ali Mohammed Ahmed Said - CV</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <button id="langToggle" class="lang-btn" aria-label="Toggle Language">العربية</button>
+  <header>
+    <h1 data-en="Ali Mohammed Ahmed Said" data-ar="علي محمد أحمد سعيد">Ali Mohammed Ahmed Said</h1>
+    <p data-en="Qataba, Al-Dhalea, Yemen | +967-772963089 / +967-735549485 | alsallamiali066@gmail.com"
+       data-ar="قتبة، الضالع، اليمن | 772963089 / 735549485-967+ | alsallamiali066@gmail.com">
+       Qataba, Al-Dhalea, Yemen | +967-772963089 / +967-735549485 | alsallamiali066@gmail.com</p>
+    <a href="cv.pdf" download data-en="Download My CV" data-ar="تحميل سيرتي الذاتية">Download My CV</a>
+  </header>
+  <main>
+    <section>
+      <h2 data-en="Professional Summary" data-ar="الملخص المهني">Professional Summary</h2>
+      <p data-en="Dedicated and detail-oriented professional with over eight years of experience in data management..."
+         data-ar="محترف دقيق ومتفاني يتمتع بأكثر من ثماني سنوات من الخبرة في إدارة البيانات...">
+         Dedicated and detail-oriented professional with over eight years of experience in data management...</p>
+    </section>
+    <section>
+      <h2 data-en="Work Experience" data-ar="الخبرات العملية">Work Experience</h2>
+      <ul>
+        <li data-en="MEAL Assistant & Data Management Assistant, YFCA (2021–2024)"
+            data-ar="مساعد MEAL ومساعد إدارة البيانات، جمعية رعاية الأسرة (2021–2024)">
+            MEAL Assistant & Data Management Assistant, YFCA (2021–2024)</li>
+        <li data-en="Field Monitor, YFCA (2021)"
+            data-ar="مراقب ميداني، جمعية رعاية الأسرة (2021)">
+            Field Monitor, YFCA (2021)</li>
+        <li data-en="Head of Academic Department, NIST (2020–2021)"
+            data-ar="رئيس القسم الأكاديمي، المعهد الوطني (2020–2021)">
+            Head of Academic Department, NIST (2020–2021)</li>
+        <li data-en="MEAL Assistant & Data Entry, QRC (2018–2020)"
+            data-ar="مساعد MEAL وإدخال بيانات، الهلال الأحمر القطري (2018–2020)">
+            MEAL Assistant & Data Entry, QRC (2018–2020)</li>
+        <li data-en="Database Administrator, Yemensoft (2016–2018)"
+            data-ar="مسؤول قواعد بيانات، يمن سوفت (2016–2018)">
+            Database Administrator, Yemensoft (2016–2018)</li>
+        <li data-en="Department Manager, Engineering College (2015–2016)"
+            data-ar="مدير قسم المعدات، كلية الهندسة (2015–2016)">
+            Department Manager, Engineering College (2015–2016)</li>
+      </ul>
+    </section>
+    <section>
+      <h2 data-en="Education" data-ar="التعليم">Education</h2>
+      <p data-en="Bachelor’s in Computer Science & Programming – Ibb University (2016)"
+         data-ar="بكالوريوس علوم الحاسوب والبرمجة – جامعة إب (2016)">
+         Bachelor’s in Computer Science & Programming – Ibb University (2016)</p>
+    </section>
+    <section>
+      <h2 data-en="Courses & Certifications" data-ar="الدورات والشهادات">Courses & Certifications</h2>
+      <ul>
+        <li data-en="MEAL DPro Certificate – 2023" data-ar="شهادة MEAL DPro – 2023">MEAL DPro Certificate – 2023</li>
+        <li data-en="Data Analytics using Excel – 2022" data-ar="تحليل البيانات باستخدام Excel – 2022">Data Analytics using Excel – 2022</li>
+        <li data-en="Project Management – 2018" data-ar="إدارة المشاريع – 2018">Project Management – 2018</li>
+      </ul>
+    </section>
+    <section>
+      <h2 data-en="Skills" data-ar="المهارات">Skills</h2>
+      <p data-en="Excel, Kobo Toolbox, GIS, ERP Onyxpro, CRM..." data-ar="إكسل، كوبا تول بوكس، نظم المعلومات الجغرافية، أونيكس برو، إدارة العملاء...">
+         Excel, Kobo Toolbox, GIS, ERP Onyxpro, CRM...</p>
+    </section>
+    <section>
+      <h2 data-en="Languages" data-ar="اللغات">Languages</h2>
+      <p data-en="Arabic (Native), English (Fluent)" data-ar="العربية (اللغة الأم)، الإنجليزية (بطلاقة)">Arabic (Native), English (Fluent)</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
