@@ -82,6 +82,12 @@ langToggle.addEventListener('click', function() {
     });
     document.documentElement.setAttribute('lang', isArabic ? 'ar' : 'en');
     document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+    // Update collapsible content heights after language switch
+    const activeCollapsibles = document.querySelectorAll('.collapsible.active');
+    activeCollapsibles.forEach(collapsible => {
+        const content = collapsible.nextElementSibling;
+        content.style.maxHeight = content.scrollHeight + "px";
+    });
 });
 
 // Scroll Progress Bar
@@ -95,7 +101,7 @@ window.addEventListener('scroll', function() {
 // Copy Email to Clipboard
 document.getElementById('copyEmail').addEventListener('click', function() {
     navigator.clipboard.writeText('alsallamiali066@gmail.com');
-    alert('Email copied to clipboard!');
+    alert(isArabic ? 'تم نسخ البريد الإلكتروني!' : 'Email copied to clipboard!');
 });
 
 // Initialize AOS
