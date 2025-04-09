@@ -1,41 +1,59 @@
-// تحسينات التبديل بين اللغات
-const langToggle = document.getElementById('langToggle');
-let currentLang = 'en';
-
-langToggle.addEventListener('click', () => {
-    currentLang = currentLang === 'en' ? 'ar' : 'en';
-    document.documentElement.setAttribute('lang', currentLang);
-    document.documentElement.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
-    langToggle.textContent = currentLang === 'en' ? 'العربية' : 'English';
-    
-    // تحديث النصوص
-    document.querySelectorAll('[data-en], [data-ar]').forEach(el => {
-        el.textContent = currentLang === 'en' ? el.dataset.en : el.dataset.ar;
-    });
+// Collapsible functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const collapsibles = document.getElementsByClassName('collapsible');
+    for (let i = 0; i < collapsibles.length; i++) {
+        collapsibles[i].addEventListener('click', function() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
 });
 
-// تحسينات الوضع الليلي
+// Back to Top functionality
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("backToTop").style.display = "block";
+    } else {
+        document.getElementById("backToTop").style.display = "none";
+    }
+};
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+// Dark Mode Toggle
 const darkModeToggle = document.getElementById('darkModeToggle');
-
-darkModeToggle.addEventListener('click', () => {
+darkModeToggle.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
-    const isDark = document.body.classList.contains('dark-mode');
-    darkModeToggle.innerHTML = isDark 
-        ? '<i class="fas fa-sun"></i> Light Mode' 
-        : '<i class="fas fa-moon"></i> Dark Mode';
-    localStorage.setItem('darkMode', isDark);
+    if (document.body.classList.contains('dark-mode')) {
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    } else {
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+    }
 });
 
-// تهيئة AOS
+// Language Toggle
+const langToggle = document.getElementById('langToggle');
+let isArabic = false;
+langToggle.addEventListener('click', function() {
+    isArabic = !isArabic;
+    langToggle.textContent = isArabic ? 'English' : 'العربية';
+    document.querySelectorAll('[data-en][data-ar]').forEach(element => {
+        element.textContent = isArabic ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+    });
+    document.documentElement.setAttribute('lang', isArabic ? 'ar' : 'en');
+    document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+});
+
+// Initialize AOS
 AOS.init({
     duration: 800,
-    once: true,
-    offset: 120,
-});
-
-// تهيئة Lightbox
-lightbox.option({
-    'resizeDuration': 200,
-    'wrapAround': true,
-    'albumLabel': 'صورة %1 من %2'
+    once: true
 });
