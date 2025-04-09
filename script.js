@@ -1,8 +1,22 @@
 // Collapsible functionality
 document.addEventListener('DOMContentLoaded', function() {
     const collapsibles = document.getElementsByClassName('collapsible');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    // Function to close all sections except the selected one
+    function closeAllExcept(selected) {
+        for (let i = 0; i < collapsibles.length; i++) {
+            if (collapsibles[i] !== selected) {
+                collapsibles[i].classList.remove('active');
+                collapsibles[i].nextElementSibling.style.maxHeight = null;
+            }
+        }
+    }
+
+    // Collapsible sections click event
     for (let i = 0; i < collapsibles.length; i++) {
         collapsibles[i].addEventListener('click', function() {
+            closeAllExcept(this);
             this.classList.toggle('active');
             const content = this.nextElementSibling;
             if (content.style.maxHeight) {
@@ -12,6 +26,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Navigation links click event
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            const targetId = this.getAttribute('href').substring(1); // Get section ID
+            const targetSection = document.getElementById(targetId);
+            const targetCollapsible = targetSection.querySelector('.collapsible');
+
+            if (targetCollapsible) {
+                closeAllExcept(targetCollapsible);
+                targetCollapsible.classList.add('active');
+                const content = targetCollapsible.nextElementSibling;
+                content.style.maxHeight = content.scrollHeight + "px";
+
+                // Smooth scroll to section
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 });
 
 // Back to Top functionality
