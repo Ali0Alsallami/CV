@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navigation links click event
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent default anchor behavior
-            const targetId = this.getAttribute('href').substring(1); // Get section ID
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
             const targetCollapsible = targetSection.querySelector('.collapsible');
 
@@ -40,8 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 targetCollapsible.classList.add('active');
                 const content = targetCollapsible.nextElementSibling;
                 content.style.maxHeight = content.scrollHeight + "px";
-
-                // Smooth scroll to section
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
@@ -86,8 +84,23 @@ langToggle.addEventListener('click', function() {
     document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
 });
 
+// Scroll Progress Bar
+window.addEventListener('scroll', function() {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    document.getElementById('progress-bar').style.width = scrollPercentage + '%';
+});
+
+// Copy Email to Clipboard
+document.getElementById('copyEmail').addEventListener('click', function() {
+    navigator.clipboard.writeText('alsallamiali066@gmail.com');
+    alert('Email copied to clipboard!');
+});
+
 // Initialize AOS
 AOS.init({
     duration: 800,
-    once: true
+    once: false,
+    easing: 'ease-in-out'
 });
