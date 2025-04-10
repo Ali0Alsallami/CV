@@ -65,9 +65,9 @@ const darkModeToggle = document.getElementById('darkModeToggle');
 darkModeToggle.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
     if (document.body.classList.contains('dark-mode')) {
-        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i> ' + (isArabic ? 'الوضع الفاتح' : 'Light Mode');
     } else {
-        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i> ' + (isArabic ? 'الوضع الداكن' : 'Dark Mode');
     }
 });
 
@@ -82,6 +82,12 @@ langToggle.addEventListener('click', function() {
     });
     document.documentElement.setAttribute('lang', isArabic ? 'ar' : 'en');
     document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+    // Update dark mode button text based on language
+    if (document.body.classList.contains('dark-mode')) {
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i> ' + (isArabic ? 'الوضع الفاتح' : 'Light Mode');
+    } else {
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i> ' + (isArabic ? 'الوضع الداكن' : 'Dark Mode');
+    }
     // Update collapsible content heights after language switch
     const activeCollapsibles = document.querySelectorAll('.collapsible.active');
     activeCollapsibles.forEach(collapsible => {
@@ -101,7 +107,7 @@ window.addEventListener('scroll', function() {
 // Copy Email to Clipboard
 document.getElementById('copyEmail').addEventListener('click', function() {
     navigator.clipboard.writeText('alsallamiali066@gmail.com');
-    alert(isArabic ? 'تم نسخ البريد الإلكتروني!' : 'Email copied to clipboard!');
+    alert(isArabic ? 'تم نسخ البريد الإلكتروني إلى الحافظة!' : 'Email copied to clipboard!');
 });
 
 // Initialize AOS
